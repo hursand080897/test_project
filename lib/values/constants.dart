@@ -1,0 +1,150 @@
+// ignore_for_file: non_constant_identifier_names
+
+library constants;
+
+import '../provider_bloc/cart_items/cart_bloc.dart';
+import 'models.dart';
+
+bool send_order = false;
+List<items> item = [];
+List<categorys> category = [];
+List<categorys> categoryhome = [];
+var children;
+List<sliders> banner = [];
+List<Products> product = [];
+List<Products> op_product = [];
+List<Products> discount_products = [];
+List<orders> activ = [];
+List<orders> dis_activ = [];
+String phone = "";
+String myCatName = '';
+String prevCatName = '';
+//String token='0';
+String token = '';
+String name = '';
+String email = '';
+String api = 'tikin.com.tm';
+bool dil = false;
+int options_id = 0;
+int categoryId = 0;
+int myCatID = 0;
+bool enter = false;
+String name1 = '';
+String name2 = '';
+
+Map<String, dynamic> home_data = {};
+Map<String, dynamic> subcats = {};
+String or_track_code = '';
+String or_total_price = '';
+int or_status = 0;
+
+String bash_cat = '0';
+var sub_children;
+int sub_id = 0;
+
+//options
+int op_id = 0;
+String op_name_tm = "";
+String op_name_ru = "";
+String op_description_tm = "";
+String op_description_ru = "";
+String op_image = "";
+double op_price = 0.00;
+int op_count = 0;
+double op_rating = 0.00;
+int op_discount = 0;
+double op_discount_price = 0.00;
+String op_category = ' ';
+var op_values;
+
+//for tm language
+String tm_onum = 'Gündelik harytlar';
+String tm_category = 'Kategoriýalar';
+String tm_favourites = 'Halanlarym';
+String tm_orders = 'Sargytlarym';
+String tm_product = 'Haryt';
+String tm_products = 'Harytlar';
+String tm_show_all = 'ählisini görkez';
+String tm_discounts = 'Aksiýalar';
+String tm_discounts_products = 'Aksiýadaky harytlar';
+String tm_product_category = 'Kategoriýadaky harytlar';
+String tm_product_same = 'Meňzeş harytlar';
+String tm_rate = 'Bahalandyrmak';
+String tm_full_dep = 'Haryt barada maglumat';
+String tm_login = 'Içeri gir';
+String tm_language = 'Dil';
+String tm_help = 'Kömek';
+String tm_about_us = 'Biz barada';
+String tm_contuct_us = 'Habarlashmak';
+String tm_address = 'Salgy';
+String tm_basket = 'Sebet';
+String tm_basket_product = 'Sebetdäki harytlar';
+String tm_extra_info = 'Eltip bermäniň goşmaça jemi';
+String tm_product_price = 'Harytlaryň bahalary';
+String tm_discount_info = 'Aksiýa boýunça arzanladyş';
+String tm_net_price = 'Jemi';
+String tm_order = 'SARGYT ET';
+String tm_did_login = 'Siziň hasabyňyz ýokmy?';
+String tm_sign = "Hasab aç";
+String tm_control_order = "Sargydy yzarla";
+String tm_name = 'Ady';
+String tm_surname = 'Familýasy';
+String tm_did_signin = 'Siziň hasabyňyz barmy?';
+String tm_telefon = 'Telefon belgiňiz';
+String tm_adres = 'Salgyňyz';
+String tm_today = 'Şugün';
+String tm_tomorrow = 'Ertir';
+String tm_type = 'Tölegiň görnüşi';
+String tm_note = 'Bellik';
+String tm_cash = 'Nagt';
+String tm_kart = 'Kart';
+String tm_cancel = 'Bes etmek';
+String tm_send = 'Eltip bermek';
+
+//for ru language
+
+String ru_onum = 'Повседневные товары';
+String ru_category = 'Категории';
+String ru_favourites = 'Избранные';
+String ru_orders = 'История заказов';
+String ru_product = 'Продукт';
+String ru_products = 'Продукты';
+String ru_show_all = 'Посмотреть все';
+String ru_discounts = 'Акции';
+String ru_discounts_products = 'Акции и распродажи';
+String ru_product_category = 'Товары категории';
+String ru_product_same = 'Похожие товары';
+String ru_rate = 'Оценить';
+String ru_full_dep = 'Описание товара';
+String ru_login = 'Войти';
+String ru_language = 'Язык';
+String ru_help = 'Помощь';
+String ru_about_us = 'О нас';
+String ru_contuct_us = 'Свяжитесь с нами';
+String ru_address = 'Адрес';
+String ru_basket = 'Корзина';
+String ru_products2 = 'Товары';
+String ru_basket_product = 'Товары в корзине';
+String ru_extra_info = 'Стоимость доставки';
+String ru_product_price = 'Цены на товары';
+String ru_discount_info = 'Скидка';
+String ru_net_price = 'Общий';
+String ru_order = 'ЗАКАЗАТЬ';
+bool which_sign = false;
+String ru_did_login = 'У вас нет учетной записи';
+String ru_sign = 'Регистрация';
+String ru_control_oder = 'Следить за доставкой';
+String ru_name = 'Имя';
+String ru_surname = 'Фамилия';
+String ru_did_signin = 'Вы зарегистрированы?';
+
+String ru_telefon = 'Ваш номер телефона';
+String ru_adres = 'Ваш адресс';
+String ru_today = 'Сегодня';
+String ru_tomorrow = 'Завтра';
+String ru_type = 'Выберите способ оплаты';
+String ru_note = 'Примечания к заказу';
+String ru_cash = ' Наличными';
+String ru_kart = 'Оплата с терминала';
+String ru_cancel = 'Oтменить';
+String ru_send = 'Oформить заказ';
