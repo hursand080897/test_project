@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project/provider_bloc/cart_items/cart_bloc.dart';
 import 'package:project/provider_bloc/futbol/futbol_news_bloc.dart';
 import 'package:project/repository/locator.dart';
-import 'package:project/splash.dart';
 import 'package:project/widgets/check_internet.dart';
 import 'package:project/widgets/futbol_news.dart';
 import 'package:project/widgets/no_internet.dart';
