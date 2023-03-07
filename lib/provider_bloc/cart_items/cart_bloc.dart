@@ -8,7 +8,6 @@ import 'package:safe_device/safe_device.dart';
 
 import '../../DB/db.dart';
 import '../../repository/remote_config_service.dart';
-import 'package:project/values/constants.dart' as Constants;
 part 'cart_event.dart';
 part 'cart_state.dart';
 
@@ -24,26 +23,20 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       emit(state.copyWith(connection: true, loading: true));
       final data = await DatabaseHelper.getUrl();
       List<Map<String, dynamic>> myData = data;
-      if (myData.isEmpty) {
+      if (myData.isNotEmpty) {
         String myurl = myData[0]['my_url'].toString();
         final bool isPlug = await checkEmu(myurl);
-        print(isPlug);
         emit(state.copyWith(
-          url: myData[0]['my_url'].toString(),
+          url: myurl,
           plug: isPlug,
           loading: false,
         ));
-        Constants.url = myData[0]['my_url'].toString();
       } else {
-        print('url');
         final FirebaseRemoteConfig remoteConfig =
             await locator.get<RemmoteConfigService>().getInstance();
         String myurl = remoteConfig.getString('my_url');
         final bool isPlug = await checkEmu(myurl);
-        print(myurl);
-        print(isPlug);
         emit(state.copyWith(url: myurl, plug: isPlug, loading: false));
-        await DatabaseHelper.clearUrl();
         await DatabaseHelper.addUrl(myurl);
       }
     } else {

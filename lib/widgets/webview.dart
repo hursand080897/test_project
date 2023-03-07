@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-// ignore: library_prefixes
-import 'package:project/values/constants.dart' as Constants;
 
 import '../provider_bloc/cart_items/cart_bloc.dart';
 
@@ -13,7 +11,6 @@ class WebView extends StatelessWidget {
   late final WebViewController _controller;
   @override
   Widget build(BuildContext context) {
-    print('hey');
     print(context.select(((CartBloc bloc) => bloc.state.url)));
     //   String url = context.select((CartBloc bloc) => bloc.state.url);
     _controller = WebViewController()

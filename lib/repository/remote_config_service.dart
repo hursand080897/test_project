@@ -13,8 +13,10 @@ class RemmoteConfigService {
     RemoteConfigValue(null, ValueSource.valueStatic);
     bool updated = await remoteConfig.fetchAndActivate();
     if (updated) {
+      // ignore: avoid_print
       print('updated ${remoteConfig.getString('my_url')}');
     } else {
+      // ignore: avoid_print
       print('no update ${remoteConfig.getString('my_url')}');
     }
     return remoteConfig;

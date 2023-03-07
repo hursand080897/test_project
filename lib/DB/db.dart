@@ -41,6 +41,9 @@ class DatabaseHelper {
     final db = await DatabaseHelper.db();
     try {
       await db.delete("myUrl");
-    } catch (err) {}
+    } catch (err) {
+      // ignore: avoid_print
+      print('error Db clearUrl $err');
+    }
   }
 }
