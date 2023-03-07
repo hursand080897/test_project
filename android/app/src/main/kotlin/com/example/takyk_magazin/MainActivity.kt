@@ -1,4 +1,4 @@
-package com.example.injir_new
+package com.test.project
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.injir_new">
+    package="com.test.project">
    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="Injir söwda new"
+        android:label="Test project"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
