@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project/provider_bloc/cart_items/cart_bloc.dart';
-import 'package:project/provider_bloc/futbol/futbol_news_bloc.dart';
-import 'package:project/repository/locator.dart';
-import 'package:project/widgets/check_internet.dart';
-import 'package:project/widgets/futbol_news.dart';
-import 'package:project/widgets/no_internet.dart';
-import 'package:project/widgets/webview.dart';
+import 'package:sport/provider_bloc/cart_items/cart_bloc.dart';
+import 'package:sport/provider_bloc/futbol/futbol_news_bloc.dart';
+import 'package:sport/repository/locator.dart';
+import 'package:sport/widgets/check_internet.dart';
+import 'package:sport/widgets/futbol_news.dart';
+import 'package:sport/widgets/no_internet.dart';
+import 'package:sport/widgets/webview.dart';
 
 void main() {
   setupLocator();
@@ -34,7 +34,9 @@ class Main extends StatelessWidget {
   const Main({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    print('scaff');
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           elevation: 0,
           toolbarHeight: 0,

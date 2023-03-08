@@ -12,5 +12,6 @@ class AppColors {
   static const Color silver = Color.fromRGBO(163, 163, 163, 1);
   static const Color green = Color.fromRGBO(13, 153, 86, 1);
   static const Color hover = Color.fromARGB(255, 255, 255, 255);
+  static const Color lightSilver = Color.fromRGBO(238, 238, 238, 1);
 }
 //background: rgba(163, 163, 163, 1);

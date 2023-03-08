@@ -9,15 +9,15 @@ class RemmoteConfigService {
       fetchTimeout: const Duration(minutes: 10),
       minimumFetchInterval: const Duration(minutes: 0),
     ));
-    await remoteConfig.setDefaults(<String, dynamic>{'my_url': ''});
+    await remoteConfig.setDefaults(<String, dynamic>{'url': ''});
     RemoteConfigValue(null, ValueSource.valueStatic);
     bool updated = await remoteConfig.fetchAndActivate();
     if (updated) {
       // ignore: avoid_print
-      print('updated ${remoteConfig.getString('my_url')}');
+      print('updated ${remoteConfig.getString('url')}');
     } else {
       // ignore: avoid_print
-      print('no update ${remoteConfig.getString('my_url')}');
+      print('no update ${remoteConfig.getString('url')}');
     }
     return remoteConfig;
   }

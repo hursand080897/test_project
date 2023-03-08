@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "490026843618",
-    "project_id": "test-64239",
-    "storage_bucket": "test-64239.appspot.com"
+    "project_number": "391939836843",
+    "project_id": "rfadia-f2b5a",
+    "storage_bucket": "rfadia-f2b5a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:490026843618:android:54002096205759f9604dbb",
+        "mobilesdk_app_id": "1:391939836843:android:85d46b5c53b3bcfb30e0ee",
         "android_client_info": {
-          "package_name": "com.test.project"
+          "package_name": "fav.bet.favbet.app.sport"
         }
       },
       "oauth_client": [
         {
-          "client_id": "490026843618-95a5ltj163poj5rdav1rkregbblpijdv.apps.googleusercontent.com",
+          "client_id": "391939836843-qej0klfo9h6rrsh9k18sj82sa8ovvgo2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD8DWl3jEgLUqbr3-2oyCezVn5D8RT7yok"
+          "current_key": "AIzaSyC_tWKh3xxtr5NJJJiN15GKcMKrh3-cnyU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "490026843618-95a5ltj163poj5rdav1rkregbblpijdv.apps.googleusercontent.com",
+              "client_id": "391939836843-qej0klfo9h6rrsh9k18sj82sa8ovvgo2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

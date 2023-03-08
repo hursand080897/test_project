@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/values/colors.dart';
+import 'package:sport/values/colors.dart';
 
 class CheckInternet extends StatelessWidget {
   const CheckInternet({super.key});

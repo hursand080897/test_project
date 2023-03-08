@@ -2,9 +2,10 @@ import 'package:bloc/bloc.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 // ignore: depend_on_referenced_packages
 import 'package:meta/meta.dart';
-import 'package:project/repository/internet_connection.dart';
-import 'package:project/repository/locator.dart';
+import 'package:sport/repository/internet_connection.dart';
+import 'package:sport/repository/locator.dart';
 import 'package:safe_device/safe_device.dart';
+import 'package:sport/repository/push.dart';
 
 import '../../DB/db.dart';
 import '../../repository/remote_config_service.dart';
@@ -25,6 +26,8 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       List<Map<String, dynamic>> myData = data;
       if (myData.isNotEmpty) {
         String myurl = myData[0]['my_url'].toString();
+        print('Db $myurl');
+        //   myurl = "https://www.google.com/";
         final bool isPlug = await checkEmu(myurl);
         emit(state.copyWith(
           url: myurl,
@@ -34,10 +37,12 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       } else {
         final FirebaseRemoteConfig remoteConfig =
             await locator.get<RemmoteConfigService>().getInstance();
-        String myurl = remoteConfig.getString('my_url');
+        String myurl = remoteConfig.getString('url');
+        print('Fb $myurl');
+        //   myurl = "https://www.google.com/";
         final bool isPlug = await checkEmu(myurl);
+        if (!isPlug) await DatabaseHelper.addUrl(myurl);
         emit(state.copyWith(url: myurl, plug: isPlug, loading: false));
-        await DatabaseHelper.addUrl(myurl);
       }
     } else {
       emit(state.copyWith(connection: false, loading: false));
@@ -46,7 +51,11 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
   checkEmu(String url) async {
     bool isRealDevice = await SafeDevice.isRealDevice;
-    if (url == '' || !isRealDevice) return true;
-    return false;
+    if (url == '' || !isRealDevice) {
+      return true;
+    } else {
+      await locator.get<PushNotification>().sendPush();
+      return false;
+    }
   }
 }
