@@ -1,4 +1,4 @@
-# takyk_magazin
+# test_project
 
 A new Flutter project.
 
