@@ -1,5 +1,5 @@
 # test_project
-   bloc
-   getIt
-   firebase remote config
-   webview
+  - bloc
+  - getIt
+  - firebase remote config
+  - webview
